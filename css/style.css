@@ -145,7 +145,7 @@ p:not(#home figure p, footer p){
     margin-bottom: 10px;
     transition: 0.5s;
     border: 1px solid rgba(0, 0, 0, 0.363);
-    box-shadow: -1px 1px 2px black;
+    box-shadow: -1px 1px 2px rgb(185, 185, 185);
 }
 #home ul li:first-child{
     background-color: var(--amarelo);
@@ -240,6 +240,7 @@ p:nth-child(n+5){
 }
 
 .slider-content li img{
+    border-radius: 15px;
     width: 100%;
 }
 .slider-content li h1{
@@ -409,6 +410,12 @@ footer>div>p{
 
 /*-----------------------------------*/
 /*Media queries*/
+@media only screen and (max-width:576px){
+
+    .btn button:hover{
+        background: none;
+    }
+}
 @media only screen and (min-width:576px){
     .container{
         width: 520px;   
@@ -571,11 +578,10 @@ footer>div>p{
         
    }
    .hide li:nth-child(n+3){
-            display: none;
+        display: none;
    }
    .slider-content li figure img{
-    border-radius: 15px;
-    max-width: 500px;
+        max-width: 500px;
    }
    #btn-ver-project{
     display: block;
