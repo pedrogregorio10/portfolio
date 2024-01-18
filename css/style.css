@@ -186,7 +186,7 @@ p:nth-child(n+5){
     display: none;
    
 }
-#btn-ver{
+.btn-ver{
     margin:0 20px ;
     background: none;
     border: none;
@@ -196,6 +196,7 @@ p:nth-child(n+5){
     border: 1px solid var(--vermelho);
     padding: 5px;
     border-radius: 3px;
+    clear: both;
 }
 /*Section Habilidade style configuration*/
 #habilidade ol{
@@ -207,7 +208,7 @@ p:nth-child(n+5){
 }
 /*Section Project style configuration*/
 #projeto{
-    padding:0 10px;
+    padding:50px 10px;
     background-color: #b6b6b638;
 }
 #projeto>h1{
@@ -454,7 +455,7 @@ footer>div>p{
     }
     header ul li:hover{
         background: none;
-        border-bottom: 3px solid var(--azul);
+        border-bottom: 3px solid #81b2d3;
         box-sizing: border-box;
         
     }
@@ -542,6 +543,36 @@ footer>div>p{
    }
    #sobre{
     width: 60%;
+   }
+   .slider{
+    max-width: 100%;
+    display: inline-block;
+   }
+   .slider-content{
+    display: block;
+    overflow: hidden;
+   }
+   .btn{
+    display: none;
+   }
+   .slider-content li{
+    width: 50%;
+    margin-bottom: 20px;
+   }
+   .slider-content li:nth-child(1n){
+        float: left;
+        clear: both;
+   }
+   .slider-content li:nth-child(2n){
+        float: right;
+        
+   }
+   .hide li:nth-child(n+3){
+            display: none;
+   }
+   .slider-content li figure img{
+    border-radius: 15px;
+    max-width: 500px;
    }
 }
 @media only screen and (min-width:1200px) {

@@ -11,17 +11,27 @@ function () {
 
 /*btn-ver mais section Sobre*/
 var sobre=document.getElementById('sobre')
-let btn_ver=document.getElementById('btn-ver')
-btn_ver.addEventListener('click',
-function() {
+var project_list=document.getElementById('project-list')
+let btn_ver_sobre=document.getElementById('btn-ver-sobre')
+let btn_ver_project=document.getElementById('btn-ver-project')
+
+btn_ver_sobre.addEventListener('click',verMais)
+btn_ver_project.addEventListener('click',verMais)
+function verMais() {
   sobre.classList.toggle('hide')
   if (sobre.getAttribute('class')=='hide') { 
-    btn_ver.textContent='ver mais...'
+    btn_ver_sobre.textContent='ver mais...'
  }else{
-     btn_ver.textContent='ver menos'
+     btn_ver_sobre.textContent='ver menos'
+ }
+ project_list.classList.toggle('hide')
+ if (sobre.getAttribute('class')=='hide') { 
+    btn_ver_project.textContent='ver mais...'
+ }else{
+     btn_ver_project.textContent='ver menos'
  }
 }
-)
+
 /*Slider animation Photos*/
 
 const slider = document.querySelector('.slider-content');
@@ -55,7 +65,7 @@ function prevProject() {
     
 }
 setInterval(() => {
-    nextProject()
+    netProject()
 },18000)
 
 /*form Filset validation*/
