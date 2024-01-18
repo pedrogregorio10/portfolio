@@ -65,10 +65,14 @@ function prevProject() {
     
 }
 
-    setInterval(() => {
+    setInterval(() => { 
+        if(window.innerWidth<992){
         nextProject()
+        }else{
+            
+        }
     },18000)
-
+    
 /*form Filset validation*/
 document.getElementById('nome').addEventListener('invalid',function(disableCustom) {
     disableCustom.preventDefault()
