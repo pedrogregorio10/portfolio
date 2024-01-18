@@ -64,9 +64,10 @@ function prevProject() {
     showProject(cont)
     
 }
-setInterval(() => {
-    netProject()
-},18000)
+
+    setInterval(() => {
+        nextProject()
+    },18000)
 
 /*form Filset validation*/
 document.getElementById('nome').addEventListener('invalid',function(disableCustom) {
