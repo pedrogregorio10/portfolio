@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-    transition: width 1s;
+    transition: width 0.6s;
 }
 a{
     text-decoration: none;
@@ -144,6 +144,8 @@ p:not(#home figure p, footer p){
     line-height: 150px;
     margin-bottom: 10px;
     transition: 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    box-shadow: -1px 1px 2px black;
 }
 #home ul li:first-child{
     background-color: var(--amarelo);
@@ -174,7 +176,7 @@ p:not(#home figure p, footer p){
     transition: 0.4s;
 }
 #home .phome{
-    padding-bottom:40px;
+    padding-bottom:30px;
 }
 /*Section Sobre style configuration*/
 p:nth-child(n+5){
@@ -463,7 +465,7 @@ footer>div>p{
     /*Home comfiguration tablet, pc*/
     #home{
     padding-top: 70px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     overflow: hidden;
     
    }
@@ -496,8 +498,8 @@ footer>div>p{
    }
    #home ul li{
         display: inline-block;
-        width: 100px;
-        height: 100px;
+        width: 98px;
+        height: 98px;
         line-height: 100px;
    }
    #home ul li a{
@@ -538,11 +540,21 @@ footer>div>p{
    #home ul li:not(:last-child){
     margin-right: 15px;
    }
+   #sobre{
+    width: 60%;
+   }
 }
 @media only screen and (min-width:1200px) {
 .container{
     width: 1110px;
 }
+#home{
+    width: 960px;
+    margin: 0 auto;
+}
+   #home>p, #home>ul, #home>h1{
+    margin-right: 0;
+   }
 
 
 }
