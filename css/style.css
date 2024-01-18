@@ -287,7 +287,7 @@ p:nth-child(n+5){
    display: none;
 }
 .btn button{
-    min-height: 270px;
+    height: 245px;
     background:none ;
     width: 35px;
     border: none;   
@@ -312,6 +312,9 @@ p:nth-child(n+5){
 }
 .btn #btn-next::after{
     content: '>';
+}
+#btn-ver-project{
+    display: none;
 }
 /*Section contacto style configuration formulario*/
 #contato{
@@ -573,6 +576,9 @@ footer>div>p{
    .slider-content li figure img{
     border-radius: 15px;
     max-width: 500px;
+   }
+   #btn-ver-project{
+    display: block;
    }
 }
 @media only screen and (min-width:1200px) {
