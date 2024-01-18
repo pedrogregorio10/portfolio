@@ -69,7 +69,7 @@ function prevProject() {
         if(window.innerWidth<992){
         nextProject()
         }else{
-            
+            window.location.reload()
         }
     },18000)
     
