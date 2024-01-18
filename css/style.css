@@ -1,0 +1,549 @@
+@charset 'UTF-8';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    transition: width 1s;
+}
+a{
+    text-decoration: none;
+    color: #333131;
+}
+ul li{
+    list-style-type: none;
+}
+:root{
+    --cinza:#f2f2f2;
+    --amarelo:#e2a339;
+    --vermelho:#eb4c37;
+    --azul:#95d6da;
+    --padra0:#fff8f8;
+}
+.interface{
+    background-color: var(--cinza);
+}
+/*header style configuration*/
+header>.container{
+    background-color: #fff8f8; 
+}
+header h1{
+    display: inline-block;
+    font-size: 1.9em;
+    color: #333131;
+    line-height: 60px;
+    padding-left: 5px;
+}
+header h1::before{
+    display: inline-block;
+    content:'';
+    width: 15px;
+    height: 15px;
+    background-color: #e2a339;
+    border-radius: 50%;
+    margin: 2px 3px;
+
+    
+}
+
+header #btnMenu{
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    background-image:url('../img/menu.png');
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+    float: right;
+}
+
+.menu{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+header nav ul{
+   background-color: rgb(197, 197, 197);
+}
+header ul li{
+    transition: 0.5s;
+}
+header ul li:hover{
+    background-color: #20201a;
+}
+header ul li:not(:last-child){
+    border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+}
+header ul li a{
+    display: block;
+    font-size: 1.2em;
+    transition: 0.4s;
+    padding: 15px 10px;
+}
+header ul li a:hover{
+    color: white;
+}
+/*General sections configurations*/
+main section h1{
+    padding: 10px 15px;
+    color:var(--amarelo);
+
+}
+main h2{
+    padding: 0 15px;
+    color: var(--vermelho);
+}
+p:not(#home figure p, footer p){
+    padding: 10px;
+    text-align: justify;
+}
+/*Section Home style configuraction*/
+#home>h1{
+    display: none;
+}
+#home figure{
+    padding-top: 20px;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+   
+}
+#home>p{
+    margin-top: 20px;
+
+}
+#home figure img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+#home figure figcaption{
+    position:absolute;
+    background-color:#95d7daf8;
+    right: 5px;
+    bottom: 5%;
+    padding: 20px;
+    border-radius: 13px;
+}
+#home figure figcaption>p:first-child{
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+#home ul li{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius:50%;
+    line-height: 150px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+#home ul li:first-child{
+    background-color: var(--amarelo);
+}
+#home ul li:nth-child(2){
+    background-color: var(--vermelho);
+}
+#home ul li:last-child{
+    background-color: var(--azul);
+}
+
+#home ul li:first-child:hover{
+    background-color: #634513;
+}
+#home ul li:nth-child(2):hover{
+    background-color: #641409;
+}
+#home ul li:last-child:hover{
+    background-color: #09273f;
+}
+#home ul li a:hover{
+    color:rgb(241, 221, 183);
+}
+#home ul li a{
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    transition: 0.4s;
+}
+#home .phome{
+    padding-bottom:40px;
+}
+/*Section Sobre style configuration*/
+p:nth-child(n+5){
+   transition: all 3s;
+}
+.hide p:nth-child(n+5){
+    display: none;
+   
+}
+#btn-ver{
+    margin:0 20px ;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--vermelho);
+    font-size:0.9em;
+    border: 1px solid var(--vermelho);
+    padding: 5px;
+    border-radius: 3px;
+}
+/*Section Habilidade style configuration*/
+#habilidade ol{
+    padding: 0 30px;
+}
+#habilidade ol li{
+    padding: 3px 0;
+    color:#3b3602;
+}
+/*Section Project style configuration*/
+#projeto{
+    padding:0 10px;
+    background-color: #b6b6b638;
+}
+#projeto>h1{
+    color: var(--vermelho);
+}
+/*Slider of projects*/
+.slider{
+    overflow: hidden;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.slider-content{
+    display: flex;
+    transition: 0.8s;
+}
+.slider-content li{
+    width: 100%;
+    flex: 0 0 auto;
+}
+.figure{
+    margin: 0;
+}
+.slider-content li figure{
+    width: 100%;
+    height: auto;
+    position: relative;  
+}
+
+.slider-content li img{
+    width: 100%;
+}
+.slider-content li h1{
+    color: black;
+    font-size: 1.5em;
+}
+.slider-content li h2{
+    color: var(--amarelo);
+    font-size: 1.3em;
+}
+.slider-content li h2 span:not(:last-child)::after{
+    content: ',';
+}
+.slider-content li figcaption a{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    transition: 1s;
+}
+.btn-link{
+    background-color: var(--vermelho);
+    color:var(--cinza);
+    border: 1px solid var(--cinza);
+    margin-bottom: 5px;
+}
+.acender{
+    background-color: var(--cinza);
+    color: var(--vermelho);
+    border: 1px solid var(--vermelho);
+}
+.btn-link:hover{
+    background-color: wheat;
+    color: rgb(9, 172, 58);
+    border: 1px solid rgb(9, 172, 58);
+}
+/*Prev and Next buttom, movin image*/
+
+.btn{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.btn button span{
+   display: none;
+}
+.btn button{
+    min-height: 270px;
+    background:none ;
+    width: 35px;
+    border: none;   
+    cursor: pointer;
+    font-size: 1.7em;
+    color: #eb4c37;
+    transition: 0.4s;
+}
+.btn button:hover{
+    background-color: #e2a439e0;
+    color: #6288a7;
+    font-size: 2em;
+}
+.btn #btn-prev{
+    float: left;
+}
+.btn #btn-prev::before{
+    content: '<';
+}
+.btn #btn-next{
+    float: right;
+}
+.btn #btn-next::after{
+    content: '>';
+}
+/*Section contacto style configuration formulario*/
+#contato{
+    background-color: var(--azul);
+    background-image: linear-gradient(to bottom,rgb(140, 194, 210) , rgba(50, 88, 105, 0.678));
+    width: 95%;
+    margin: auto;
+    border-radius:  15px 0 5px 5px; 
+    margin-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+#contato h1{
+    color: white;
+    background-color: rgb(50, 88, 105);
+    border-radius: 15px 0;
+
+}
+#contato form{    
+    padding: 20px;
+    padding-top: 0px;
+}
+#contato form legend{
+    color: blue;
+    padding:10px 0;
+}
+#contato form div{
+   padding: 5px 0px;
+
+}
+#contato form div label{
+    display: block;
+    padding: 5px 0;
+}
+#contato form div input, form textarea{
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #3f6769;
+    width: 90%;
+    background-color: var(--cinza);
+}
+.btn-container{
+    overflow: hidden;
+}
+.btn-container button{
+    float: right;
+    margin-right: 7%;
+}
+#contato form button{
+    cursor: pointer;
+    display: block;
+    background: none;
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: var(--cinza);
+    border-radius: 10px;
+    width: 200px;
+    color:rgb(50, 88, 105);
+    font-size: larger;
+    transition: all 0.3s;
+}
+#contato form button:hover{
+    background-color: #09273f;
+    border: 1px solid rgb(140, 194, 210);
+    color: white;
+}
+#contato>p{
+    clear: both;
+    color: rgb(238, 238, 238);
+    font-size: 0.9em;
+}
+.inicio{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    text-indent: -999px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #3b3602;
+}
+
+/*Footer configuration*/
+footer{
+    background-color:#fff8f8;
+    padding: 20px;
+}
+footer>div>p{
+    text-align: center;
+
+}
+
+/*-----------------------------------*/
+/*Media queries*/
+@media only screen and (min-width:576px){
+    .container{
+        width: 520px;   
+        margin: auto;
+    }
+    main>.container{
+        background-color: white;
+    }
+    
+}
+@media	(min-width:	768px)	{
+    .container{
+        width: 690px;
+    }
+    /*Header link configuration*/
+    header>.container{
+        overflow: hidden;
+    }
+    header h1{
+       font-size: 1.4em;
+        float: right;
+        margin-right: 15px;
+        
+    }
+    header h1::before{
+        width: 10px;
+        height: 10px;
+    }
+    header #btnMenu{
+        display: none;
+    }
+    .menu{
+        display: block;
+       display: flex;
+     
+    }
+    header nav{
+       float: left;
+       
+    }
+    header nav ul{
+        background: none;
+       
+    }
+    header ul li:not(:last-child){
+        border-bottom: none;
+    }
+    header ul li:hover{
+        background: none;
+        border-bottom: 3px solid var(--azul);
+        box-sizing: border-box;
+        
+    }
+    header ul li a:hover{
+        color: var(--azul);
+    } 
+   
+    /*Home comfiguration tablet, pc*/
+    #home{
+    padding-top: 70px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+   }
+   #home>h1{
+    display: block;
+    margin-top: 45px;
+    font-size: 4em;
+    padding: 0;
+    font-family:monospace;
+    color: rgb(82, 82, 82);
+   }
+   #home figure{
+    width: 48%;
+    float: left;
+    padding-top: 0;
+   }
+   #home figure figcaption{
+        padding: 10px;
+        font-size: 0.9em;
+   }
+   #home>p, #home>ul, #home>h1{
+    width: 45%;
+    float: right;
+    margin-right: 15px;
+    
+   }
+   #home>p{     
+        margin-top: 0;
+        padding-bottom: 0;
+   }
+   #home ul li{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+   }
+   #home ul li a{
+        font-size: 1em;
+   }
+   #projeto{
+    background-color:#f2f2f280;
+   }
+
+}
+@media only screen and (min-width:992px){   
+    .container{
+        width: 930px;
+    }
+    #home figure{
+        width: 450px; 
+       }
+       #home>p, #home>ul, #home>h1{
+        width: 445px;
+       }
+       #home figure figcaption{
+        padding: 20px;
+        font-size: 1em;
+   }
+   #home>h1{
+    display: block;
+    margin-top: 130px;
+    font-size: 5em;
+    }
+    #home ul li{
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+   }
+   #home ul{
+    margin-top: 30px;
+   }
+   #home ul li:not(:last-child){
+    margin-right: 15px;
+   }
+}
+@media only screen and (min-width:1200px) {
+.container{
+    width: 1110px;
+}
+
+
+}
+

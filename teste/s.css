@@ -1,0 +1,85 @@
+@charset 'utf-8';
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Slider of projects*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    overflow: hidden;
+    max-width: 500px;
+    height:auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transition: 1.5s;
+}
+ul li{
+    list-style-type: none;
+}
+.slider-content li {
+    width: 100%;
+    flex: 0 0 auto;
+    
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: left;
+}
+
+.slider-content li figure{
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+
+}
+
+.slider-content li img{
+    width: 100%;
+}
+
+button{
+    top: 140.5px;
+    position: absolute;
+    cursor: pointer;
+    border: none;   
+    font-size: 2.2em;
+    background: none;
+    color: rgb(226, 183, 43);
+    padding: 5px;
+    transition: 0.4s;
+    width: 50px;
+}
+button:hover{
+    background-color: rgba(170, 133, 9, 0.521);
+    color: aliceblue;
+}
+button>span{
+    display: none;
+}
+#btn-prev{
+    left: 0;
+   
+}
+#btn-prev::before{
+    content: '<';
+}
+#btn-next{
+    right: 0;
+}
+#btn-next::after{
+    content: '>';
+}
