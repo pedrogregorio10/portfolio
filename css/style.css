@@ -297,11 +297,6 @@ p:nth-child(n+5){
     color: #eb4c37;
     transition: 0.4s;
 }
-.btn button:hover{
-    background-color: #e2a439e0;
-    color: #6288a7;
-    font-size: 2em;
-}
 .btn #btn-prev::before{
     content: '<';
 }
@@ -408,10 +403,7 @@ footer>div>p{
 /*-----------------------------------*/
 /*Media queries*/
 @media only screen and (max-width:576px){
-
-    .btn button:hover{
-        background: none;
-    }
+  
 }
 @media only screen and (min-width:576px){
     .container{
