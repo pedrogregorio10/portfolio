@@ -259,7 +259,7 @@ p:nth-child(n+5){
     border-radius: 5px;
     padding: 10px;
     margin-left: 20px;
-    transition: 1s;
+    transition: 0.4s;
 }
 .btn-link{
     background-color: var(--vermelho);
@@ -280,14 +280,14 @@ p:nth-child(n+5){
 /*Prev and Next buttom, movin image*/
 
 .btn{
-    position: absolute;
-    top: 0;
-    width: 100%;
+   
 }
 .btn button span{
    display: none;
 }
 .btn button{
+    position: absolute;
+    top: 0;
     height: 245px;
     background:none ;
     width: 35px;
@@ -302,14 +302,11 @@ p:nth-child(n+5){
     color: #6288a7;
     font-size: 2em;
 }
-.btn #btn-prev{
-    float: left;
-}
 .btn #btn-prev::before{
     content: '<';
 }
 .btn #btn-next{
-    float: right;
+    right: 0;
 }
 .btn #btn-next::after{
     content: '>';
@@ -430,7 +427,6 @@ footer>div>p{
     .container{
         width: 690px;
     }
-    /*Header link configuration*/
     header>.container{
         overflow: hidden;
     }
@@ -473,7 +469,6 @@ footer>div>p{
         color: var(--azul);
     } 
    
-    /*Home comfiguration tablet, pc*/
     #home{
     padding-top: 70px;
     padding-bottom: 50px;
@@ -601,4 +596,3 @@ footer>div>p{
 
 
 }
-
