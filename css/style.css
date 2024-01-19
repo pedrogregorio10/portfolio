@@ -278,18 +278,14 @@ p:nth-child(n+5){
     border: 1px solid rgb(9, 172, 58);
 }
 /*Prev and Next buttom, movin image*/
-
-.btn{
-   
-}
 .btn button span{
    display: none;
 }
 .btn button{
     position: absolute;
     top: 0;
-    height: 245px;
-    background:none ;
+    line-height: 150px;
+    background:none;
     width: 35px;
     border: none;   
     cursor: pointer;
@@ -412,6 +408,14 @@ footer>div>p{
     }
     main>.container{
         background-color: white;
+    }
+    .btn button{
+        height: 245px;
+    }
+    .btn button:hover{
+        background-color: #e2a439e0;
+        color: #6288a7;
+        font-size: 2em;
     }
     
 }
